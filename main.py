@@ -23,6 +23,7 @@ def start_supervisor():
     image=vevc_image,
     secrets=[modal.Secret.from_name("custom-secret")],
     min_containers=1,
+    region="asia-east1",
     max_containers=1
 )
 @modal.asgi_app()
